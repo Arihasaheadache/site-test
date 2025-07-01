@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Daily Dashboard</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>🗓 Daily Dashboard</h1>
+    <div class="header-controls">
+      <button id="theme-toggle"></button>
+      <button id="menu-toggle">☰</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <aside id="sidebar" class="hidden">
+      <button data-tab="clock">Clock</button>
+      <button data-tab="weather">Weather</button>
+      <button data-tab="quote">Quote</button>
+      <button data-tab="notes">Notes</button>
+    </aside>
+
+    <main>
+      <section id="clock" class="tab active">
+        <h2>Current Time</h2>
+        <div id="time"></div>
+      </section>
+
+      <section id="weather" class="tab">
+        <h2>Weather</h2>
+        <div id="weather-info">Loading...</div>
+      </section>
+
+      <section id="quote" class="tab">
+        <h2>Motivational Quote</h2>
+        <blockquote id="quote-text">Loading...</blockquote>
+      </section>
+
+      <section id="notes" class="tab">
+        <h2>Your Notes</h2>
+        <form id="note-form">
+          <textarea id="note-input" placeholder="Write a note..." required></textarea>
+          <button type="submit">Add</button>
+          <span id="note-error"></span>
+        </form>
+        <input type="text" id="search" placeholder="Search notes..." />
+        <ul id="notes-list"></ul>
+      </section>
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
